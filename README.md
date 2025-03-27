@@ -1,3 +1,9 @@
+## Equipe
+- Ian Carvalho Santos Conceição
+- João Paulo Alves de carvalho
+- Enzo Franklin Alves e Souza
+- Jonathas Sampaio Mascarenhas Almeida
+
 # Sistema de Gerenciamento de Músicas
 
 ## Como Executar
