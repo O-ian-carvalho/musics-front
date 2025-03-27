@@ -1,0 +1,38 @@
+<div class="upload-container">
+    <h2>Adicionar Música</h2>
+    
+    <form [formGroup]="musicaForm" (ngSubmit)="onSubmit()">
+        <label for="nome">Nome da Música</label>
+        <input id="nome" type="text" formControlName="nome" placeholder="Digite o nome">
+        <div *ngIf="musicaForm.controls['nome'].invalid && musicaForm.controls['nome'].touched" class="error">
+            <p *ngIf="musicaForm.controls['nome'].hasError('required')">Nome é obrigatório.</p>
+            <p *ngIf="musicaForm.controls['nome'].hasError('minlength')">Mínimo 3 caracteres.</p>
+        </div>
+
+        <label for="lancamento">Data de Lançamento</label>
+        <input id="lancamento" type="date" formControlName="lancamento">
+
+        <label for="duracao">Duração (segundos)</label>
+        <input id="duracao" type="number" formControlName="duracaoEmSegundos">
+
+        <label for="genero">Gênero</label>
+        <select id="genero" formControlName="generoId">
+            <option *ngFor="let genero of generos" [value]="genero.id">{{ genero.nome }}</option>
+        </select>
+
+        <label for="artista">Artista</label>
+        <select id="artista" formControlName="artistaId">
+            <option *ngFor="let artista of artistas" [value]="artista.id">{{ artista.nome }}</option>
+        </select>
+
+        <label for="album">Álbum</label>
+        <select id="album" formControlName="albumId">
+            <option *ngFor="let album of albuns" [value]="album.id">{{ album.nome }}</option>
+        </select>
+
+        <label for="arquivo">Arquivo de Música</label>
+        <input id="arquivo" type="file" (change)="onFileSelected($event)">
+
+        <button type="submit" [disabled]="musicaForm.invalid || !arquivo">Enviar Música</button>
+    </form>
+</div>

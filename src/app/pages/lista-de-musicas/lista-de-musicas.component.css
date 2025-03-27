@@ -1,0 +1,84 @@
+#conteiner{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-bottom: 70px;
+}
+
+
+#criar{
+    box-shadow: 5px 5px 5px black;
+    padding: 10px 30px;
+    background-color: #fff;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 17pt;
+}
+
+#criar:hover{
+    cursor: pointer;
+    background-color: #bdbdbd;
+
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px; /* Espaçamento abaixo do formulário */
+}
+
+form input {
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 200px; /* Largura fixa para os inputs */
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px; /* Espaçamento acima do botão */
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px; /* Espaçamento abaixo do formulário */
+}
+
+form input {
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 200px; /* Largura fixa para os inputs */
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px; /* Espaçamento acima do botão */
+}
+
+form button:hover {
+    background-color: #45a049;
+}

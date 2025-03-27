@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+*{
+    font-family: sans-serif;
+    text-transform: capitalize;
+}
+
+body{
+    background-color: rgb(228, 228, 228);
+    padding: 0 200px;
+}

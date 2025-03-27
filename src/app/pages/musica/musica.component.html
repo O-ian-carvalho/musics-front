@@ -1,0 +1,31 @@
+<div id="container-externo">
+    <div class="musica-card" *ngIf="musica">
+        <h1>{{ musica.nome }}</h1>
+        
+        <div class="info">
+            <p><strong>Artista:</strong> {{ musica.artista.nome }}</p>
+            <p><strong>Gênero:</strong> {{ musica.genero.nome }}</p>
+            <p><strong>Lançamento:</strong> {{ musica.lancamento | date:'dd/MM/yyyy' }}</p>
+            <p><strong>Duração:</strong> {{ formatarDuracao(musica.duracaoEmSegundos) }}</p>
+        </div>
+
+        <div *ngIf="musica.url">
+            <audio controls>
+                <source [attr.src]="'assets/musicas/' + musica.url" type="audio/mpeg">
+                Seu navegador não suporta o elemento de áudio.
+            </audio>
+        </div>
+    </div>
+
+
+    <div class="playlist-container">
+        <button class="btn-add" (click)="mostrarSelect = !mostrarSelect">Adicionar à Playlist</button>
+        
+        <div *ngIf="mostrarSelect" class="playlist-select">
+            <select [(ngModel)]="playlistSelecionada">
+                <option *ngFor="let playlist of playlists" [value]="playlist.id">{{ playlist.nome }}</option>
+            </select>
+            <button class="btn-confirm" (click)="adicionarAMusicaNaPlaylist(musica, playlistSelecionada)">Adicionar</button>
+        </div>
+    </div>
+</div>

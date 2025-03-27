@@ -1,0 +1,15 @@
+<div id="all">
+    <h2>{{playlist.nome}}</h2>
+
+    <div id="conteiner">
+        <app-musica-card  *ngFor="let musica of playlist.musicas"
+            [id]="musica.id"
+            [nome]="musica.nome"
+            [artista]="musica.artista.nome"          
+            >
+    
+        </app-musica-card>
+    </div>
+    
+</div>
+

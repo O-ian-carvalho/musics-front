@@ -1,0 +1,15 @@
+<div class="playlist-container">
+    <h2>Criar Playlist</h2>
+    <form [formGroup]="playlistForm" (ngSubmit)="onSubmit()">
+      <label for="nome">Nome da Playlist</label>
+      <input id="nome" type="text" formControlName="nome" placeholder="Digite o nome">
+  
+      <div *ngIf="playlistForm.controls['nome'].invalid && playlistForm.controls['nome'].touched" class="error">
+        <p *ngIf="playlistForm.controls['nome'].hasError('required')">Nome é obrigatório.</p>
+        <p *ngIf="playlistForm.controls['nome'].hasError('minlength')">Mínimo 3 caracteres.</p>
+      </div>
+  
+      <button type="submit" [disabled]="playlistForm.invalid">Criar</button>
+    </form>
+  </div>
+  

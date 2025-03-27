@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "MusicsFront": {
+    "ProjetoFinal": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/musics-front",
+            "outputPath": "dist/projeto-final",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -21,11 +21,10 @@
             ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
-              {
-                "glob": "**/*",
-                "input": "public"
-              }
-            ],
+                "src/assets",
+                "src/assets/musicas",
+                "src/favicon.ico"
+              ],
             "styles": [
               "src/styles.css"
             ],
@@ -59,10 +58,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "MusicsFront:build:production"
+              "buildTarget": "ProjetoFinal:build:production"
             },
             "development": {
-              "buildTarget": "MusicsFront:build:development"
+              "buildTarget": "ProjetoFinal:build:development"
             }
           },
           "defaultConfiguration": "development"

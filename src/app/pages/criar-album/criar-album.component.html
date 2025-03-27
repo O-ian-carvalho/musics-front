@@ -1,0 +1,25 @@
+<div class="playlist-container">
+    <h2>Criar Álbum</h2>
+    <form [formGroup]="albumForm" (ngSubmit)="onSubmit()">
+        <label for="nome">Nome do Álbum</label>
+        <input id="nome" type="text" formControlName="nome" placeholder="Digite o nome">
+
+        <div *ngIf="albumForm.controls['nome'].invalid && albumForm.controls['nome'].touched" class="error">
+            <p *ngIf="albumForm.controls['nome'].hasError('required')">Nome é obrigatório.</p>
+            <p *ngIf="albumForm.controls['nome'].hasError('minlength')">Mínimo 3 caracteres.</p>
+        </div>
+
+        <!-- Select para escolher o artista -->
+        <label for="artista">Selecione o Artista</label>
+        <select id="artista" formControlName="artistaId">
+            <option value="" disabled selected>Escolha um artista</option>
+            <option *ngFor="let artista of artistas" [value]="artista.id">{{ artista.nome }}</option>
+        </select>
+
+        <div *ngIf="albumForm.controls['artistaId'].invalid && albumForm.controls['artistaId'].touched" class="error">
+            <p>Selecione um artista.</p>
+        </div>
+
+        <button type="submit" [disabled]="albumForm.invalid">Criar</button>
+    </form>
+</div>

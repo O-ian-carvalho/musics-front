@@ -1,0 +1,73 @@
+#conteiner{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-bottom: 70px;
+}
+
+.album{
+    box-shadow: 5px 5px 5px black;
+    min-width: 250px;
+    border-radius: 20px;
+    padding: 20px;
+    height: 200px;
+    background-color: #fff;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+.album #artista{
+    margin-right: 10px;
+}
+.album #nome{
+    font-size: 20pt;
+    font-weight: bold;
+    margin-bottom: -30px;
+}
+.album div{
+    display: flex;
+    justify-content: space-between;
+    font-size: 16pt;
+    color: rgb(60, 60, 60);
+   
+}
+
+#ver{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 42, 209);
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+#ver:hover{
+    background-color: rgba(0, 0, 0, 0.685);
+    cursor: pointer;
+}
+
+.album a{
+    text-decoration: none;
+    padding: 10px 30px;
+    text-align: center;
+    color: #fff;
+}
+
+#criar{
+    box-shadow: 5px 5px 5px black;
+    padding: 10px 30px;
+    background-color: #fff;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 17pt;
+}
+
+#criar:hover{
+    cursor: pointer;
+    background-color: #bdbdbd;
+
+}

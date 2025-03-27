@@ -1,0 +1,18 @@
+<div id="conteiner">
+    <div class="album" *ngFor="let album of listaDeAlbuns">
+        <h2 id="nome">{{ album.nome }}</h2>
+
+        <div>
+            <h4 id="artista">{{ album.artista.nome }}</h4>
+        </div>
+        
+        <div id="ver">
+            <a routerLink="/album/{{album.id}}" routerLinkActive="router-link-active">Ver album</a>
+        </div>
+    </div>
+
+
+</div>
+
+<a id="criar" routerLink="criar"> Criar Album</a>
+

@@ -1,0 +1,21 @@
+<form [formGroup]="filtroForm" (ngSubmit)="buscar()">
+    <input type="text" formControlName="titulo" placeholder="Título">
+    <input type="text" formControlName="artista" placeholder="Artista">
+    <input type="text" formControlName="album" placeholder="Álbum">
+    <input type="text" formControlName="genero" placeholder="Gênero">
+    <input type="number" formControlName="ano" placeholder="Ano">
+    <button type="submit">Buscar</button>
+  </form>
+  
+  <div id="conteiner">
+    <app-musica-card 
+      *ngFor="let musica of listaDeMusicas"
+      [id]="musica.id"
+      [nome]="musica.nome"
+      [artista]="musica.artista.nome"
+      >
+    </app-musica-card>
+  </div>
+  
+  <a id="criar" routerLink="musicas/criar">Adicionar Música</a>
+  

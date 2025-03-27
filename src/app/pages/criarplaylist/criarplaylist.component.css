@@ -1,0 +1,71 @@
+.playlist-container {
+    width: 500px;
+    padding: 40px;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin: 70px auto; 
+}
+
+.playlist-container h2 {
+    font-size: 24pt;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.playlist-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.playlist-container label {
+    font-size: 16pt;
+    font-weight: bold;
+    text-align: left;
+    display: block;
+    color: #555;
+}
+
+.playlist-container input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14pt;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: border 0.3s ease-in-out;
+}
+
+.playlist-container input:focus {
+    border: 1px solid #007BFF;
+}
+
+.playlist-container .error {
+    color: red;
+    font-size: 12pt;
+    text-align: left;
+}
+
+.playlist-container button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16pt;
+    font-weight: bold;
+    color: white;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.playlist-container button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.playlist-container button:hover:not(:disabled) {
+    background-color: #0056b3;
+}
